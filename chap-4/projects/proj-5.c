@@ -13,7 +13,7 @@ int main(void)
     first_sum = i1 + i3 + i5 + i7 + i9 + i11;
     second_sum = i2 + i4 + i6 + i8 + i10;
 
-    check_digit = ((first_sum * 3 + second_sum) - 1) % 10 - 9;
+    check_digit = 9 - ((first_sum * 3 + second_sum) - 1) % 10;
 
     printf("Check digit : %d\n", check_digit);
 }
