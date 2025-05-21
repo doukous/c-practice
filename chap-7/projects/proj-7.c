@@ -1,20 +1,18 @@
-/* Adds two fractions */
 #include <stdio.h>
 
 int main(void)
 {
     int num1, denom1, num2, denom2;
-    char operator;
     float first_frac, second_frac, final_result;
-    int one_char_entered = 0;
+    char choosen_operator;
 
-    printf("Enter two fractions separated by an opearator: ");
-    scanf("%d/%d%c%d/%d", &num1, &denom1, &operator, &num2, &denom2);   
+    printf("Enter two fractions separated by an operator: ");
+    scanf("%d/%d%c%d/%d", &num1, &denom1, &choosen_operator, &num2, &denom2);   
 
     first_frac = (float) num1 / denom1;
     second_frac = (float) num2 / denom2;
 
-    switch (operator)
+    switch (choosen_operator)
     {
     case '+':
         final_result = first_frac + second_frac;
