@@ -43,8 +43,10 @@ bool equal_array(int counts1[SIZE], int counts2[SIZE])
     for (int i = 0; i < SIZE; i++)
     {
         if (counts1[i] != counts2[i])
+        {
             are_anagrams = false;
-        break;
+            break;
+        }
     }
 
     return are_anagrams;

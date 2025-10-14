@@ -7,12 +7,16 @@ int main(void)
 
     int size, attempts = 0;
 
-    do {
+    do
+    {
         printf("Enter size of magic square: ");
         scanf("%d", &size);
 
         if (size < 1 || size > 99 || size % 2 == 0)
+        {
             printf("Invalid input. Please enter an odd number between 1 and 99.\n");
+            attempts++;
+        }
         else
             break;
 
@@ -38,7 +42,8 @@ int main(void)
         if (magic_square[next_row][next_col] != 0)
             row = (row + 1) % size;
 
-        else {
+        else
+        {
             row = next_row;
             col = next_col;
         }
@@ -47,8 +52,9 @@ int main(void)
     }
 
     printf("\n");
-    
-    for (int i = 0; i < size; i++) {
+
+    for (int i = 0; i < size; i++)
+    {
         for (int j = 0; j < size; j++)
             printf("%4d", magic_square[i][j]);
 
