@@ -3,15 +3,16 @@
 Here is the function :
 
 ```C
+#include <stdbool.h>
 int evaluate_position(char board[8][8])
 {
     int white_value = 0, black_value = 0, piece_value = 0;
 
     for (int i = 0; i < 8; i ++)
     {
-        for (int i = 0; i < 8; i ++)
+        for (int j = 0; j < 8; j ++)
         {
-            switch (toupper(board[i][i]))
+            switch (toupper(board[i][j]))
             {
                 case 'Q':
                     piece_value = 9;
@@ -30,7 +31,7 @@ int evaluate_position(char board[8][8])
                     break;
             }
 
-            if (isupper(board[i][i]))
+            if (isupper(board[i][j]))
                 white_value += piece_value;
             else
                 black_value += piece_value;
@@ -38,7 +39,6 @@ int evaluate_position(char board[8][8])
     }
 
     int advantage = white_value - black_value;
-
-    return advantage;
+    return advantage >= 0 ? true : false;
 }
 ```
