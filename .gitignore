@@ -3,3 +3,4 @@
 a.out
 Makefile
 test.c
+**/*.o
