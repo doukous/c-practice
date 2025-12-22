@@ -12,11 +12,11 @@ int main(void) {
         exit(EXIT_FAILURE);
     }
 
-    struct point pul = {10, 25};
-    struct point plr = {20, 15};
+    p->upper_left.x = 10;
+    p->upper_left.y = 25;
 
-    p->upper_left = pul;
-    p->lower_right = plr;
+    p->lower_right.x = 20;
+    p->lower_right.y = 15;
 
     printf(
         "rectangle, upper left: (%d, %d), lower right: (%d, %d)\n",
