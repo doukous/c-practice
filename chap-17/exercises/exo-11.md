@@ -2,7 +2,7 @@
 
 Here is the function :
 
-```
+```C
 #include <stdlib.h>
 
 int count_occurences(struct node *list, int n) {
